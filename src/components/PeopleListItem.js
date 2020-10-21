@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
+
+// teste
 const PeopleListItem = (props) => {
   const { people } = props;
   const { title, first, last } = people.name;
