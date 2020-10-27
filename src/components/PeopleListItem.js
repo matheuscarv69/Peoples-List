@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 const PeopleListItem = (props) => {
   const { people } = props;
   const { title, first, last } = people.name;
+  const matheus = people.name + "matheus";
 
   return (
     <TouchableOpacity onPress={() => console.log("clicou ", first ) }>
