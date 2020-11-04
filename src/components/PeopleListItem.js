@@ -8,11 +8,11 @@ const PeopleListItem = (props) => {
   return (
     <TouchableOpacity onPress={() => {
       console.log("clicou ", first );
-      navigateToPeopleDetail();
+      navigateToPeopleDetail({ people });
     }}>
-      <View style={styles.line}>
-        <Image style={styles.avatar} source={{ uri: people.picture.thumbnail }}/>
-        <Text style={styles.lineText}>{`${title} ${first} ${last}`}</Text>
+      <View style={styles.line} >
+            <Image style={styles.avatar} source={{ uri: people.picture.thumbnail }}/>
+            <Text style={styles.lineText}>{`${title} ${first} ${last}`}</Text> 
       </View>
     </TouchableOpacity>
   );
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
+    
   },
   lineText: {
     fontSize: 20,
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
 
     marginLeft: 15,
-    borderRadius: 50,
+    borderRadius: 20,
 
     flex: 1,
   },

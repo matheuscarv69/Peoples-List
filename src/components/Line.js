@@ -1,0 +1,51 @@
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const Line = ({ label = "", content = "-" }) => {
+ 
+  return( 
+    <View style={styles.line}>
+      <Text style={[
+        styles.cell, 
+        styles.label, 
+        label.length > 8 ? styles.longLabel : null ]}>{ label }</Text>
+      <Text style={[styles.cell, styles.content]}>{ content }</Text>
+    </View>
+  );
+  
+};
+
+const styles = StyleSheet.create ({
+  line:{
+    backgroundColor: "#e2f9ff",
+
+    paddingTop: 3,
+    paddingBottom: 3,
+
+    marginBottom: 10,
+
+    borderWidth: 1,
+    borderColor: "#C5C5C5",
+
+    flexDirection: "row",
+  },
+  cell: {
+    fontSize: 18,
+
+    paddingLeft: 5,
+
+  },
+  label: {
+    fontWeight: "bold",
+    flex: 1,
+  },
+  longLabel:{
+    fontSize: 12,
+  },
+  content: {
+    flex: 3
+  }
+
+});
+
+export default Line;
