@@ -6,10 +6,7 @@ const PeopleListItem = (props) => {
   const { title, first, last } = people.name;
 
   return (
-    <TouchableOpacity onPress={() => {
-      console.log("clicou ", first );
-      navigateToPeopleDetail({ people });
-    }}>
+    <TouchableOpacity onPress={() =>{ navigateToPeopleDetail({ people }) }}>
       <View style={styles.line} >
             <Image style={styles.avatar} source={{ uri: people.picture.thumbnail }}/>
             <Text style={styles.lineText}>{`${title} ${first} ${last}`}</Text> 
